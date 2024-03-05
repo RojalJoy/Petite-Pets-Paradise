@@ -1,0 +1,275 @@
+
+body{
+    background-image: url("../Images/background.jpg");
+    background-size: cover;
+  background-position: center;
+
+ 
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .logo img {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: "Manjari", sans-serif;
+    font-weight: 1000;
+    font-size: 17px;
+    font-style: normal;
+
+  }
+  
+  nav li {
+    padding-left: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    font-weight: bold;
+    font-size: 16px;
+    
+  }
+  nav a:hover{
+    background-color: rgba(250, 145, 137);
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+
+.lookingfor {
+    position: absolute;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 500%;
+   
+    top: 25%;
+    left: 5%;
+
+}
+
+
+.paws {
+    position: absolute;
+    opacity: 10%;
+    
+}
+
+.paws img {
+    padding-top: 70px;
+    padding-left: 350px;
+    width: 290px;
+    height: 280px;
+}
+
+.homedog {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 65%;
+    z-index: 2;
+}
+
+.lookingfor .orange {
+    color: rgba(250, 145, 137);
+}
+
+.vectorhome2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 46%;
+    z-index: -2;
+}
+
+.browndog img {
+    position: absolute;
+    height: 420px;
+    max-width: 400px;
+    left:65%;
+    top:120%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+.greyrectangle {
+    position: absolute;
+    top: 170%;
+    left: 150px;
+    border-radius: 18px;
+    background-color: #d9d9d9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: 498px;
+    height: 332px;
+   z-index: 0;
+   padding: 10px;
+}
+.ellipse {
+    width: 160px;
+    height: 160px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    position: absolute;
+    object-fit: cover;
+    top: 215%;
+    left: 24%;
+    z-index: 2;
+
+}
+.viewhotel img {
+    height: 80px;
+    width: 80px;
+  
+    object-fit: cover;
+    position: absolute;
+    top: 220%;
+    left: 27%;
+    z-index: 3;
+    
+}
+
+.desc {
+    z-index: 1;
+    text-align: justify;
+   
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+
+.text {
+    font-family: "Londrina Solid-Regular", Helvetica;
+    color: #7c7a7a;
+    top: 7%;
+    left: 12%;
+
+    position: absolute;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+
+a {
+    text-decoration: none;
+    color: #7c7a7a;
+    ;
+    font-size: 18px;
+}
+
+a:hover {
+    color: black;
+ 
+}
+
+
+
+.vector-3 {
+    padding-left: 200px;
+    padding-top: 80px;
+}
+
+.homeaway {
+    color: rgb(255, 230, 153);
+    font-size: 50px;
+    /* text-shadow: 2px 2px 4px white;  */
+    padding-left: 190px;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.welcome {
+    color: black;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px white;
+    padding-left: 190px;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+
+}
+
+.vectortext {
+    
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 120%;
+    left: 1%;
+    z-index: 1;
+  
+
+}
+
+.vector3 {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 110%;
+    left: 10%;
+    z-index: 0;
+    
+}
+
+.homeawaytext .text-wrapper {
+
+    color: rgb(255, 255, 255);
+}
+
+.homeawaytext .text-wrapper-1 {
+    color: rgb(255, 255, 255);
+}
+
+.homeawaytext {
+    color: rgb(255, 255, 255);
+
+    position: absolute;
+  left: 65%;
+    font-size: 20px;
+    z-index: 1;
+    font-family: "Manjari", sans-serif;
+    font-weight: 5%;
+    font-size: 20px;
+    font-style: normal;
+    top: 210%;
+}
+
+.homeawaytext .orange {
+    color: rgb(252, 174, 124);
+}
+.rectangle1 {
+   top :210%;
+    object-fit: cover;
+    position: absolute;
+   left: 60%;
+}
+
+.rectangle2 {
+    top :210%;
+    object-fit: cover;
+    position: absolute;
+    left: 60%;
+    rotate: -0.5deg;
+
+}

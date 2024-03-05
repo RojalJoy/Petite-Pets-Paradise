@@ -1,0 +1,38 @@
+nav {
+
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+
+
+/* Style for the navigation links */
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  transition: border-bottom 0.3s ease; /* Add a smooth transition for the bottom border */
+}
+
+/* Style for the navigation links on hover */
+a:hover {
+  border-bottom: 2px solid #ffd700;
+}
+
+/* Optional: Style for the user icon */
+i.fas.fa-user {
+  margin-right: 5px;
+}

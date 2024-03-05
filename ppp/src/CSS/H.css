@@ -1,0 +1,637 @@
+
+body{
+    background-image: url("../Images/background.jpg");
+    background-size: cover;
+  background-position: center;
+
+ 
+
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+ /* .logo img {
+    max-width: 100px; /* Adjust the size as needed */
+    /* height: auto; 
+  }*/
+/*   
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: "Manjari", sans-serif;
+    font-weight: 1000;
+    font-size: 17px;
+    font-style: normal;
+
+  }
+  
+  nav li {
+    padding-left: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333; /* Adjust the color as needed */
+    /*font-weight: bold;
+    font-size: 16px;
+    
+  }
+  nav a:hover{
+    background-color: rgba(250, 145, 137);
+    color: #000;
+    border-radius: 5px;
+    padding: 5px 10px;
+  } */
+  
+
+
+
+.lookingfor {
+    position: absolute;
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 500%;
+    top: 25%;
+    left: 5%;
+
+}
+
+
+.paws {
+    position: absolute;
+    opacity: 10%;
+    top: 20%;
+    left: 30%;
+    width: 290px;
+    height: 280px;
+    
+}
+
+.homedog {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 62%;
+    z-index: 2;
+}
+
+.lookingfor .orange {
+    color: rgba(250, 145, 137);
+}
+
+
+.vectorhome2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 46%;
+    z-index: -2;
+}
+
+.browndog img {
+    position: absolute;
+    height: 520px;
+    max-width: 500px;
+    left:65%;
+    top:120%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    
+}
+
+.greyrectangle {
+    position: absolute;
+    top: 150%;
+    left: 180px;
+    border-radius: 18px;
+    background-color: #d9d9d9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    width: 598px;
+    height: 432px;
+   z-index: 0;
+   padding: 10px;
+}
+.ellipse {
+    width: 160px;
+    height: 160px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+    position: absolute;
+    object-fit: cover;
+    top: 190%;
+    left: 22%;
+    z-index: 2;
+
+}
+.viewhotel img {
+    height: 80px;
+    width: 80px;
+  
+    object-fit: cover;
+    position: absolute;
+    top:193%;
+    left: 24%;
+    z-index: 3;
+    
+}
+
+.desc {
+    z-index: 1;
+    text-align: justify;
+    /* font-family: "Londrina Solid-Regular", Helvetica; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+
+.text {
+    font-family: "Londrina Solid-Regular", Helvetica;
+    color: #7c7a7a;
+    top: 7%;
+    left: 12%;
+    /* margin-top: 870px; */
+    position: absolute;
+    padding-top: 100px;
+    z-index: 1;
+}
+
+
+a {
+    text-decoration: none;
+    color: #7c7a7a;
+    ;
+    font-size: 18px;
+}
+
+a:hover {
+    color: black;
+    /* Change color on hover */
+}
+
+
+
+
+.homeaway {
+    color: rgb(255, 230, 153);
+    font-size: 50px;
+    /* text-shadow: 2px 2px 4px white;  */
+
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+}
+
+.welcome {
+    color: black;
+    font-size: 35px;
+    text-shadow: 2px 2px 4px white;
+
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 50px;
+
+}
+
+.vectortext {
+    
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 115%;
+    left: 20%;
+    z-index: 1;
+    /* padding-top: 0px; */
+
+}
+
+.vector3 {
+    width: 800px;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    z-index: 0;
+    
+}
+
+.homeawaytext .text-wrapper {
+
+    color: rgb(255, 255, 255);
+}
+
+.homeawaytext .text-wrapper-1 {
+    color: rgb(255, 255, 255);
+}
+
+.homeawaytext {
+    color: rgb(255, 255, 255);
+
+    position: absolute;
+  left: 65%;
+    font-size: 20px;
+    z-index: 1;
+    font-family: "Manjari", sans-serif;
+    font-weight: 5%;
+    font-size: 25px;
+    font-style: normal;
+    top: 190%;
+}
+
+.homeawaytext .orange {
+    color: rgb(252, 174, 124);
+}
+.rectangle1 {
+   top :190%;
+    position: absolute;
+   left: 60%;
+    height: auto;
+    width: 600px;
+    z-index: -1;
+}
+
+.rectangle2 {
+    top :190%;
+    position: absolute;
+    left: 60%;
+    rotate: -0.5deg;
+    z-index: 5;
+    width:600px;
+     height:auto;
+     z-index: -1;
+
+}
+@media screen and (min-width: 1001px) and (max-width: 1159px)  {
+
+  .lookingfor {
+      top: 22%;
+      font-size: 65px;
+  }
+  
+  .paws img {
+      width: 100px;
+      height: 100px;
+  }
+  
+  .homedog { top: 61%;}
+  
+  .vectorhome2 { top: 44%;}
+  
+  
+  .browndog img {
+      width: 300px;
+      left:65%;
+      top:105%;
+  }
+  
+  .vector3 {
+      width: 450px;
+      height: auto;
+      top: 98%;
+      left: 12%;
+  }
+  .vectortext {
+      height: auto;
+      top: 112%;
+      left: 20%;
+      z-index: 1;
+  }
+  .homeaway { font-size: 35px; }
+  
+  
+  .welcome { font-size: 35px;}
+  
+  .greyrectangle {
+      top: 145%;
+      left: 130px;
+       width: 400px;
+      height: 200px;
+  }
+  
+  .desc {  font-size: 10px;}
+  .ellipse {
+      width: 100px;
+      height: 100px;
+      top: 180%;
+      left: 28%;
+  }
+  .viewhotel img {
+      height: 50px;
+      width: 50px;
+      top: 182%;
+      left: 30%;   
+  }
+  
+  .text {
+      top: -30%;
+      left: 22%;
+      font-size: 10px;
+  }
+  .homeawaytext {
+      left: 67%;
+      font-size: 13px;
+      top: 181%;
+  }
+  .rectangle1 {
+     top :180%;
+     left: 65%;
+     width: 300px;
+     height: auto;
+  }
+  
+  .rectangle2 {
+      top :180%;
+      left: 65%;
+      width: 300px;
+      height: auto;
+  
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1000px)  {
+    nav ul {font-size: 15px;}
+    nav li {  padding-left: 10px; }
+
+    nav a {   font-size: 15px;  }
+  
+  .lookingfor {
+      top: 22%;
+      font-size: 60px;
+  }
+  
+  .paws img {
+      width: 100px;
+      height: 100px;
+  }
+  
+  .homedog { top: 57%;}
+  
+  .vectorhome2 { top: 44%;}
+  
+  
+  .browndog img {
+      width: 250px;
+      left:65%;
+      top:90%;
+  }
+  
+  .vector3 {
+      width: 400px;
+      height: auto;
+      top: 82%;
+      left: 12%;
+  }
+  .vectortext {
+      height: auto;
+      top: 95%;
+      left: 20%;
+      z-index: 1;
+  }
+  .homeaway { font-size: 30px; }
+  
+  
+  .welcome { font-size: 30px;}
+  
+  .greyrectangle {
+      top: 125%;
+      left: 100px;
+       width: 350px;
+      height: 200px;
+  }
+  
+  .desc {  font-size: 10px;}
+  .ellipse {
+      width: 80px;
+      height: 80px;
+      top: 160%;
+      left: 32%;
+  }
+  .viewhotel img {
+      height: 45px;
+      width: 45px;
+      top: 162%;
+      left: 34%;   
+  }
+  
+  .text {
+      top: -50%;
+      left: 25%;
+      font-size: 8px;
+  }
+  .homeawaytext {
+      left: 67%;
+      font-size: 11px;
+      top: 151%;
+  }
+  .rectangle1 {
+      top :150%;
+     left: 65%;
+     width: 260px;
+     height: auto;
+  }
+  
+  .rectangle2 {
+      top :150%;
+      left: 65%;
+
+      width: 260px;
+      height: auto;
+  
+  }
+}
+
+
+
+@media screen and (min-width: 512px) and (max-width: 743px)   {
+
+  
+  .lookingfor {
+      top: 22%;
+      font-size: 55px;
+  }
+  
+  .paws img {
+      width: 100px;
+      height: 100px;
+  }
+  
+  .homedog { top: 51%;}
+  
+  .vectorhome2 { top: 44%;}
+  
+  
+  .browndog img {
+      width: 200px;
+      left:65%;
+      top:75%;
+  }
+  
+  .vector3 {
+      width: 300px;
+      height: auto;
+      top: 72%;
+      left: 12%;
+  }
+  .vectortext {
+      height: auto;
+      top: 80%;
+      left: 20%;
+      z-index: 1;
+  }
+  .homeaway { font-size: 20px; }
+  
+  
+  .welcome { font-size: 20px;}
+  
+  .greyrectangle {
+      top: 100%;
+      left: 100px;
+       width: 250px;
+      height: 150px;
+  }
+  
+  .desc {  font-size: 8px;}
+  .ellipse {
+      width: 65px;
+      height: 65px;
+      top: 120%;
+      left: 34%;
+  }
+  .viewhotel img {
+      height: 35px;
+      width: 35px;
+      top: 121%;
+      left: 37%;   
+  }
+  
+  .text {
+      top: -80%;
+      left: 25%;
+      font-size: 6px;
+  }
+  .homeawaytext {
+      left: 67%;
+      font-size: 9px;
+      top: 121%;
+  }
+  .rectangle1 {
+      top :120%;
+     left: 65%;
+     width: 200px;
+     height: auto;
+  }
+  
+  .rectangle2 {
+      top :120%;
+      left: 65%;
+
+      width: 200px;
+      height: auto;
+  
+  }
+}
+
+
+
+
+@media screen and (max-width: 512px) {
+
+  
+  .lookingfor {
+      top: 20%;
+      font-size: 35px;
+  }
+  
+  .paws img {
+      width: 100px;
+      height: 100px;
+  }
+  
+  .homedog { top: 53%;}
+  
+  .vectorhome2 { top: 46%;}
+  
+  
+  .browndog img {
+      width: 150px;
+      left:65%;
+      top:70%;
+  }
+  
+  .vector3 {
+      width: 250px;
+      height: auto;
+      top: 65%;
+      left: 10%;
+  }
+  .vectortext {
+      height: auto;
+      top: 73%;
+      left: 20%;
+      z-index: 1;
+  }
+  .homeaway { font-size: 15px; }
+  
+  
+  .welcome { font-size: 15px;}
+  
+  .greyrectangle {
+      top: 90%;
+      left: 70px;
+       width: 200px;
+      height: 100px;
+  }
+  
+  .desc {  font-size: 6px;}
+  .ellipse {
+      width: 60px;
+      height: 60px;
+      top: 105%;
+      left: 33%;
+  }
+  .viewhotel img {
+      height: 30px;
+      width: 30px;
+      top: 107%;
+      left: 36%;   
+  }
+  
+  .text {
+      top: -90%;
+      left: 25%;
+      font-size: 5px;
+  }
+  .homeawaytext {
+      left: 67%;
+      font-size: 8px;
+      top: 100%;
+  }
+  .rectangle1 {
+      top :100%;
+     left: 65%;
+     width: 150px;
+     height: auto;
+  }
+  
+  .rectangle2 {
+      top :100%;
+      left: 65%;
+      rotate: -0.5deg;
+      width: 150px;
+      height: auto;
+  
+  }          
+  }
+

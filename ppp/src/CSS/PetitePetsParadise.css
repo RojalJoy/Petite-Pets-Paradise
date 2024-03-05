@@ -1,0 +1,297 @@
+.BG {
+  position: fixed;
+  width: auto;
+  height: 100%;
+}
+
+.BG:after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  /* background-color: rgba(250,145,137,0.5);  */
+  object-fit: cover;
+}
+
+.BG img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  opacity: 3%;
+}
+
+.logo {
+  position: absolute;
+}
+
+.logo img {
+  width: 120px;
+  height: 45px;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 900px;
+  display: flex;
+  position: absolute;
+  padding-top: 30px;
+  font-family: "Manjari", sans-serif;
+  font-weight: 1000;
+  font-size: 17px;
+  font-style: normal;
+}
+
+nav ul li {
+  margin-left: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: rgba(250, 145, 137);
+  color: #000;
+}
+
+
+.lookingfor {
+  position: absolute;
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  padding-top: 170px;
+  padding-left: 250px;
+
+}
+
+/* .lookingfor img{
+width: 950px;
+height: 250px;
+padding: 240px;
+padding-top: 150px;
+
+} */
+.paws {
+  position: absolute;
+  opacity: 10%;
+  rotate: 30deg;
+}
+
+.paws img {
+  padding-top: 70px;
+  padding-left: 350px;
+  width: 290px;
+  height: 280px;
+}
+
+.homedog {
+  position: absolute;
+}
+
+.homedog img {
+  padding-top: 510px;
+  /* padding-left: 3px; */
+  width: 1468px;
+  height: 340px;
+}
+
+.lookingfor .orange {
+  color: rgba(250, 145, 137);
+}
+
+.profile-link {
+  position: absolute;
+  display: inline-block;
+  font-size: 24px;
+  color: #ffeaea;
+  /* Change the color of the icon */
+  text-decoration: none;
+  /* Remove underlines from the link */
+  padding-left: 1436px;
+  padding-top: 20px;
+}
+
+.profile-link:hover {
+  color: #162b29;
+  /* Change the color of the icon on hover */
+}
+
+.vectorhome {
+  padding-top: 20px;
+
+}
+
+.browndog img {
+  position: absolute;
+  height: 420px;
+  width: 400px;
+  margin-left: 900px;
+  margin-top: 220px;
+}
+
+.greyrectangle {
+  position: absolute;
+  top: 403px;
+  left: 218px;
+  border-radius: 18px;
+  background-color: #d9d9d9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+  width: 498px;
+  height: 332px;
+  margin-top: 850px;
+}
+
+.desc {
+  text-align: justify;
+  /* font-family: "Londrina Solid-Regular", Helvetica; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-top: 40px;
+}
+
+.rightrec1 {
+  margin-left: 800px;
+  position: absolute;
+  margin-top: 665px;
+}
+
+.rightrec2 {
+  margin-left: 800px;
+  position: absolute;
+  margin-top: 660px;
+  rotate: -0.5deg;
+
+}
+
+.viewhotel img {
+  height: 80px;
+  width: 80px;
+  margin-top: 785px;
+  margin-left: 410px;
+  position: absolute;
+}
+
+.text {
+  font-family: "Londrina Solid-Regular", Helvetica;
+  color: #7c7a7a;
+  margin-left: 25px;
+  /* margin-top: 870px; */
+  position: absolute;
+  padding-top: 100px;
+  z-index: 1;
+}
+
+
+a {
+  text-decoration: none;
+  color: #7c7a7a;
+  ;
+  font-size: 18px;
+}
+
+a:hover {
+  color: black;
+  /* Change color on hover */
+}
+
+.ellipse {
+  width: 160px;
+  height: 160px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) inset;
+  margin-left: 370px;
+  position: absolute;
+  margin-top: 770px;
+}
+
+.homeawaytext .text-wrapper {
+
+  color: rgb(255, 255, 255);
+}
+
+.homeawaytext .text-wrapper-1 {
+  color: rgb(255, 255, 255);
+}
+
+.homeawaytext {
+  color: rgb(255, 255, 255);
+  padding-top: 380px;
+  position: absolute;
+  padding-left: 875px;
+  font-size: 20px;
+  z-index: 1;
+  font-family: "Manjari", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.homeawaytext .orange {
+  color: rgb(252, 174, 124);
+}
+
+.vector-3 {
+  padding-left: 200px;
+  padding-top: 80px;
+}
+
+.homeaway {
+  color: rgb(255, 230, 153);
+  font-size: 50px;
+  /* text-shadow: 2px 2px 4px white;  */
+  padding-left: 190px;
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.welcome {
+  color: black;
+  font-size: 35px;
+  text-shadow: 2px 2px 4px white;
+  padding-left: 190px;
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 50px;
+
+}
+
+.vectortext {
+  margin-top: -170px;
+  position: absolute;
+  /* padding-top: 0px; */
+
+}
+
+.vector3 {
+  padding-top: 150px;
+  padding-left: 160px;
+}
+
+.rectangle1 {
+  margin-left: 800px;
+  position: absolute;
+  margin-top: 355px;
+}
+
+.rectangle2 {
+  margin-left: 800px;
+  position: absolute;
+  margin-top: 350px;
+  rotate: -0.5deg;
+
+}

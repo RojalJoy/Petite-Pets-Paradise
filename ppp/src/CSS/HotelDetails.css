@@ -1,0 +1,54 @@
+/* Base styles */
+.container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+  padding: 20px;
+}
+
+h1 {
+  font-family: Montserrat, sans-serif; /* Or your preferred heading font */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap; /* Ensure elements wrap if needed */
+  gap: 20px; /* Spacing between elements */
+}
+
+img {
+  max-width: 40%; /* Adjust based on image aspect ratio */
+  align-self: flex-start; /* Align to top */
+  border-radius: 5px; /* Add optional rounded corners */
+}
+
+p {
+  font-family: Merriweather, sans-serif; /* Or your preferred body font */
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold; /* Emphasize labels */
+}
+
+a {
+  color: #2196F3; /* Playful blue accent */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness (optional) */
+@media (max-width: 768px) {
+  .details {
+    flex-direction: column; /* Stack elements on small screens */
+  }
+  img {
+    max-width: 100%; /* Image takes full width */
+  }
+}
