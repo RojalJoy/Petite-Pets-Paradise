@@ -26,7 +26,7 @@ function Hotel() {
     }, []);
 
     const fetchHotelsFromFirebase = async () => {
-        const hotelsCollectionRef = collection(firestore, 'PetHotels');
+        const hotelsCollectionRef = collection(firestore, 'NewPetHotels');
         const hotelsQuerySnapshot = await getDocs(hotelsCollectionRef);
     
         const fetchedHotels = hotelsQuerySnapshot.docs.map(doc => ({
@@ -148,9 +148,10 @@ const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // G
     return (
         <>
             <Navbar />
+            <h1>Hotels and Restaurants <img className="Hlogo" src={require("./hotel-1@2x.png")} alt="Hotel Logo" /> </h1>
             <div className="Hcontainer">
 
-                <h1>Hotels and Restaurants <img className="Hlogo" src={require("./hotel-1@2x.png")} alt="Hotel Logo" /> </h1>
+                
                 <div id="filters">
                     <input type="text" id="searchInput" placeholder="Search by name..." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
                     <label htmlFor="sortByPrice">Sort by Price:</label>

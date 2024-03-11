@@ -21,6 +21,8 @@ import Memories from './Pages/Memories';
 import UserProfile from './Pages/UserProfile';
 import Parks from './Pages/Parks';
 import ParkDetails from './Pages/ParkDetails'; 
+import Services from './Pages/Services'
+import ServiceDetails from './Pages/ServiceDetails';
 function App() {
  
   return (
@@ -39,6 +41,8 @@ function App() {
         {<Route path="/UserProfile" element={<UserProfile />} /> }
         {<Route path="/Parks" element={<Parks />} /> }
         {<Route path="/park/:name" element={<ParkDetails />} />}
+        {<Route path="/Services" element={<Services />} />}
+        {<Route path="/service/:name" element={<ServiceDetails />} />}
       </Routes>
       </UserProvider> 
     </BrowserRouter>

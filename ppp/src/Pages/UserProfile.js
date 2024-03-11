@@ -127,7 +127,7 @@ const UserProfile = () => {
       const Ratings = favoritesQuerySnapshot.docs.map(doc => doc.data().Rating);
 
       // Fetch hotel names with similar Ratings but different names
-      const hotelsCollectionRef = collection(firestore, 'PetHotels');
+      const hotelsCollectionRef = collection(firestore, 'NewPetHotels');
       const recommendedHotelNamesQuery = query(hotelsCollectionRef, where('Rating', 'in', Ratings));
       const recommendedHotelNamesQuerySnapshot = await getDocs(recommendedHotelNamesQuery);
 

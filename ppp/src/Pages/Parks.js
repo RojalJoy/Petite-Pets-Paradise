@@ -1,61 +1,50 @@
-// Parks.js
+import React, { useState, useEffect } from 'react';
+import '../CSS/Parks.css';
+import Navbar from '../Pages/Navbar';
 
-import React, { useEffect, useState } from 'react';
-import { firestore } from './fire';
-import { collection, getDocs } from '@firebase/firestore';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import Navbar from './Navbar';
-import ParkDetails from './ParkDetails';
+import { firestore } from "../Pages/fire";
+import { collection, getDocs } from "@firebase/firestore";
+import { Link} from 'react-router-dom';
 
-const DogParkCard = ({ park }) => {
-  return (
-    <div className="dog-park-card">
-      <Link to={`/park/${encodeURIComponent(park.name)}`}>
-        <h2>{park.name}</h2>
-        <img src={park.image} alt={park.name} />
-      </Link>
-      <p><strong>Location:</strong> {park.location}</p>
-      <p><strong>Description:</strong> {park.desc}</p>
-      <a href={park.directions} target="_blank" rel="noopener noreferrer">Directions</a>
-    </div>
-  );
-};
 
-const DogParkList = ({ parks }) => {
-  return (
-    <div className="dog-park-list">
-      {parks.map((park, index) => (
-        <DogParkCard key={index} park={park} />
-      ))}
-    </div>
-  );
-};
 
-const Parks = () => {
-  const [dogParks, setDogParks] = useState([]);
+function Parks() {
+  const [parks, setparks] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const parksCollection = await getDocs(collection(firestore, 'petActivities'));
-        const parksData = parksCollection.docs.map(doc => doc.data());
-        setDogParks(parksData);
-      } catch (error) {
-        console.error('Error fetching data from Firebase:', error);
-      }
-    };
+      const fetchparksFromFirebase = async () => {
+          const parksCollectionRef = collection(firestore, 'petActivities');
+          const parksQuerySnapshot = await getDocs(parksCollectionRef);
 
-    fetchData();
-  }, []);
+          const fetchedparks = parksQuerySnapshot.docs.map(doc => ({
+              ...doc.data(),
+              id: doc.id,
+          }));
+          setparks(fetchedparks);
+      };
+
+      fetchparksFromFirebase(); // Call the function here
+  }, []); // Add an empty dependency array to ensure useEffect runs only once
 
   return (
-    <div className="app">
-      <Navbar />
+      <>
+          <Navbar />
 
-      <h1>Dog Parks</h1>
-      <DogParkList parks={dogParks} />
-    </div>
+          <div className="Pcontainer">
+          <h1>parks and Restaurants <img className="Hlogo" src={require("../JS File/hotel-1@2x.png")} alt="park Logo" /> </h1>
+              <div className="Hparks" id="parksContainer">
+                  {parks.map((park) => ( // Map over the 'parks' state
+                      <div className="Hparks1" key={park.name}>
+                          <Link to={`/park/${park.name}`} className="Hname">
+                              <img src={park['image']} alt={park.name} />
+                              {park.name}
+                          </Link>
+                      </div>
+                  ))}
+              </div>
+          </div>
+      </>
   );
-};
+}
 
 export default Parks;

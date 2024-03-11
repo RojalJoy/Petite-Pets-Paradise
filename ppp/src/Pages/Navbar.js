@@ -20,7 +20,7 @@ function Navbar() {
         <li><Link to="/Parks">Parks</Link></li>
         <li><Link to="">Contact</Link></li>
         <li><Link to="/MeetUpForm">MeetUp</Link></li>
-        <li><Link to="">Services</Link></li>
+        <li><Link to="/Services">Services</Link></li>
         <li><Link to="/Memories">Memories</Link></li>
         <li><Link to={profileLink}><i className="fas fa-user"></i>{username}</Link></li>
       </ul>
