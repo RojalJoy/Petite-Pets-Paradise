@@ -1,0 +1,65 @@
+.pet-care h1{
+    color: #4B515E;
+    text-align: end;
+
+}
+
+.pet-care .content{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    margin: 1rem 0rem;
+    /* gap: 10px; */
+    padding: 1rem 0rem;
+    position: absolute;
+    top: 2600px;
+}
+
+.image-sec{
+  
+    /* margin: 1rem; */
+    padding: 1rem 0rem;
+ 
+
+}
+
+
+
+.content-sec h1{
+    position: relative;
+    z-index: 99;
+    top: 10px;
+    right: 92px;
+    width: 534px;
+    font-size: 60px;
+}
+.content-sec .round{
+    position: relative;
+    left: 400px;
+    top: -253px;
+    width: 400px;
+}
+
+
+.content
+.points-sec{
+    position: absolute;
+}
+
+.points-sec .pointsimg{
+    position: relative;
+    top: -420px;
+    left: 90px;
+    width: 700px;
+}
+
+.points-sec p{
+    position: relative;
+    top: -802px;
+    line-height: 50px;
+    /* page-break-after: always; */
+    right: -200px;
+    font-size: 18px;
+    font-weight: 100;
+    width: 80%;
+}

@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/Navbar.css'; // Import your Navbar styles if needed
 import { useUser } from '../Pages/UserContext';
-
+import PetCare from './PetCare';
+import FindUs from './FindUs';
 function Navbar() {
   const { user } = useUser();
 
@@ -18,7 +19,7 @@ function Navbar() {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/Hotel">Hotels</Link></li>
         <li><Link to="/Parks">Parks</Link></li>
-        <li><Link to="">Contact</Link></li>
+        <li><Link to="/FindUs">Contact</Link></li>
         <li><Link to="/MeetUpForm">MeetUp</Link></li>
         <li><Link to="/Services">Services</Link></li>
         <li><Link to="/Memories">Memories</Link></li>

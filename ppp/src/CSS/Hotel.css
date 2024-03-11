@@ -43,7 +43,8 @@ h1 {
 
 .Hhotel1 img {
     width: 100%;
-    height: auto;
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images maintain their aspect ratio and cover the container */
     border-radius: 10px;
 }
 

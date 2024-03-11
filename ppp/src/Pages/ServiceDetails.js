@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { firestore } from "../Pages/fire";
 import Navbar from '../Pages/Navbar';
 import { collection, getDocs, query, where } from "@firebase/firestore";
+import Footer from './Footer';
 
 function ServiceDetails() {
     const [ServiceDetails, setServiceDetails] = useState(null);
@@ -82,6 +83,7 @@ function ServiceDetails() {
                     )}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

@@ -5,6 +5,7 @@ import Navbar from '../Pages/Navbar';
 import { firestore } from "../Pages/fire";
 import { collection, getDocs } from "@firebase/firestore";
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function Services() {
   const [services, setServices] = useState([]);
@@ -42,7 +43,7 @@ function Services() {
       <Navbar />
 
       <div className="Pcontainer">
-        <h1>Services and Restaurants <img className="Hlogo" src={require("../JS File/hotel-1@2x.png")} alt="service Logo" /> </h1>
+        <h1>Services  <img className="Hlogo" src={require("../JS File/hotel-1@2x.png")} alt="service Logo" /> </h1>
 
         {/* Dropdown for selecting a place */}
         <select onChange={handlePlaceChange} value={selectedPlace}>
@@ -65,6 +66,7 @@ function Services() {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

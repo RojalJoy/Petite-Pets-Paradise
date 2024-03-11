@@ -5,7 +5,7 @@ import Navbar from '../Pages/Navbar';
 import { firestore } from "../Pages/fire";
 import { collection, getDocs } from "@firebase/firestore";
 import { Link} from 'react-router-dom';
-
+import Footer from "./Footer";
 
 
 function Parks() {
@@ -31,7 +31,7 @@ function Parks() {
           <Navbar />
 
           <div className="Pcontainer">
-          <h1>parks and Restaurants <img className="Hlogo" src={require("../JS File/hotel-1@2x.png")} alt="park Logo" /> </h1>
+          <h1>parks  <img className="Hlogo" src={require("../JS File/hotel-1@2x.png")} alt="park Logo" /> </h1>
               <div className="Hparks" id="parksContainer">
                   {parks.map((park) => ( // Map over the 'parks' state
                       <div className="Hparks1" key={park.name}>
@@ -43,6 +43,7 @@ function Parks() {
                   ))}
               </div>
           </div>
+          <Footer/>
       </>
   );
 }

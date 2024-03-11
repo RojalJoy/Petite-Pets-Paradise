@@ -6,6 +6,7 @@ import { firestore } from "../Pages/fire";
 import { collection, getDocs, addDoc, query, where, deleteDoc, doc } from "@firebase/firestore";
 import { Link, useNavigate } from 'react-router-dom';
 import { useUser } from '../Pages/UserContext';
+import Footer from '../Pages/Footer';
 
 function Hotel() {
     const [hotels, setHotels] = useState([]);
@@ -201,6 +202,7 @@ const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // G
                     ))}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

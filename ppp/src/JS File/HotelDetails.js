@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { firestore } from "../Pages/fire";
 import Navbar from '../Pages/Navbar';
 import { collection, getDocs, query, where } from "@firebase/firestore";
+import Footer from '../Pages/Footer';
 
 function HotelDetails() {
     const [hotelDetails, setHotelDetails] = useState(null);
@@ -89,6 +90,7 @@ function HotelDetails() {
                     )}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

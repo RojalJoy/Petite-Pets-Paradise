@@ -11,6 +11,7 @@ import { v4 } from "uuid";
 
 import '../CSS/profile.css'; // Import your stylesheet
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const UserProfile = () => {
   const { user, logoutUser } = useUser();
@@ -252,6 +253,7 @@ const UserProfile = () => {
         )}
       </footer>
     </div>
+    <Footer/>
     </>
   );
 };

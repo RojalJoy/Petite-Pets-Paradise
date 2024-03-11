@@ -2,8 +2,11 @@ import React, { useRef } from 'react';
 import { firestore } from "./fire.js";
 import { addDoc, collection } from "@firebase/firestore";
 import '../CSS/Register.css'; 
+import Footer from './Footer.jsx';
+import Navbar from './Navbar.js';
 
 export default function Register() {
+  
 
     const usernameRef = useRef(); // Ref for the username input field
 
@@ -35,6 +38,8 @@ export default function Register() {
     }
     
     return (
+        <>
+        <Navbar/>
         <div className="register-container">
                         <h1>Registration form</h1>
                         <img className="cat" src={require("../Images/cat@2x.png")} alt="Cat"/>
@@ -64,5 +69,8 @@ export default function Register() {
                     <button type='submit'>Submit</button></div>
             </form>
         </div>
+        <Footer/>
+        </>
+
     )
 }

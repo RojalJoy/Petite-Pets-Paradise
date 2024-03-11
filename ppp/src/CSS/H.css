@@ -4,9 +4,12 @@ body{
     background-size: cover;
   background-position: center;
 
- 
+
+
 
 }
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -274,6 +277,23 @@ a:hover {
      z-index: -1;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (min-width: 1001px) and (max-width: 1159px)  {
 
   .lookingfor {

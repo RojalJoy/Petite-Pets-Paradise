@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { firestore } from "../Pages/fire";
 import Navbar from '../Pages/Navbar';
 import { collection, getDocs, query, where } from "@firebase/firestore";
+import Footer from './Footer';
 
 function ParkDetails() {
     const [ParkDetails, setParkDetails] = useState(null);
@@ -72,6 +73,7 @@ function ParkDetails() {
                     )}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }
