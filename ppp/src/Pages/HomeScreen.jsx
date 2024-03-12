@@ -3,6 +3,7 @@ import React from 'react';
 import '../CSS/H.css';
 import { Helmet } from 'react-helmet';
 import Navbar from './Navbar';
+import '../CSS/media.css'
 function HomeScreen() {
   return (
     <>

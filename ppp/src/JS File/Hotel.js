@@ -28,7 +28,7 @@ function Hotel() {
     const fetchHotelsFromFirebase = async () => {
         const hotelsCollectionRef = collection(firestore, 'PetHotels');
         const hotelsQuerySnapshot = await getDocs(hotelsCollectionRef);
-    
+
         const fetchedHotels = hotelsQuerySnapshot.docs.map(doc => ({
             ...doc.data(),
             id: doc.id, // Include the document ID for unique identification
@@ -40,8 +40,8 @@ function Hotel() {
         return (
             hotel.Name.toLowerCase().includes(searchText.toLowerCase()) &&
             ((petFee && hotel.Special.toLowerCase().includes('there is pet fee')) ||
-             (noPetFee && hotel.Special.toLowerCase().includes('no pet fee')) ||
-             (!petFee && !noPetFee)) // Display all hotels when no checkboxes are checked
+                (noPetFee && hotel.Special.toLowerCase().includes('no pet fee')) ||
+                (!petFee && !noPetFee)) // Display all hotels when no checkboxes are checked
         );
     });
 
@@ -52,24 +52,24 @@ function Hotel() {
         filteredHotels.sort((a, b) => parseFloat(b.Price.replace('Rs.', '').replace(',', '')) - parseFloat(a.Price.replace('Rs.', '').replace(',', '')));
     }
 
-    const handleFavoriteClick = async (Name,image, Rating) => {
+    const handleFavoriteClick = async (Name, image, Rating) => {
         if (user) {
             // Check if the hotel is already in favorites
             if (!favorites.includes(Name)) {
                 // Add the hotel to favorites
                 setFavorites([...favorites, Name]);
                 try {
-                // Add the favorite to the database
-                const favoritesCollectionRef = collection(firestore, 'favorites');
-                const favoriteData = {
-                    username: user,  // Assuming you have a 'username' field in your user object
-                    Name: Name,
-                    image: image, // Add the image to the database
-                Rating: Rating, // Add the rating to the database
+                    // Add the favorite to the database
+                    const favoritesCollectionRef = collection(firestore, 'favorites');
+                    const favoriteData = {
+                        username: user,  // Assuming you have a 'username' field in your user object
+                        Name: Name,
+                        image: image, // Add the image to the database
+                        Rating: Rating, // Add the rating to the database
 
-                };
+                    };
 
-                
+
                     await addDoc(favoritesCollectionRef, favoriteData);
                     console.log(`Added ${Name} to favorites for user ${user}.`);
                 } catch (error) {
@@ -133,7 +133,7 @@ function Hotel() {
         }
     }, []);
 
-const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // Get unique places
+    const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // Get unique places
 
     const handlePlaceChange = (e) => {
         setSelectedPlace(e.target.value);
@@ -154,7 +154,7 @@ const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // G
                 <div id="filters">
                     <input type="text" id="searchInput" placeholder="Search by name..." value={searchText} onChange={(e) => setSearchText(e.target.value)} />
                     <label htmlFor="sortByPrice">Sort by Price:</label>
-                    
+
                     <select id="sortByPrice" value={sortByPrice} onChange={(e) => setSortByPrice(e.target.value)}>
                         <option value="ascending">Ascending</option>
                         <option value="descending">Descending</option>
@@ -167,8 +167,8 @@ const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // G
                     <input type="checkbox" id="noPetFeeCheckbox" checked={noPetFee} onChange={(e) => setNoPetFee(e.target.checked)} />
 
 
-                     {/* Step 2: Dropdown for selecting place */}
-                     <label htmlFor="placeDropdown">Select Place:</label>
+                    {/* Step 2: Dropdown for selecting place */}
+                    <label htmlFor="placeDropdown">Select Place:</label>
                     <select id="placeDropdown" value={selectedPlace} onChange={handlePlaceChange}>
                         <option value="">All Places</option>
                         {uniquePlaces.map(place => (
@@ -177,27 +177,27 @@ const uniquePlaces = Array.from(new Set(hotels.map(hotel => hotel.place))); // G
                             </option>
                         ))}
                     </select>
-                    
+
                 </div>
                 {/* ... (your existing code) */}
-                <div className="Hhotels" id="hotelsContainer">
-                    {filteredHotelsByPlace.map((hotel) => (
-                        <div className="Hhotel1" key={hotel.Name}>
-                            <Link to={`/hotel/${hotel.Name}`} className="Hname">
-
-                                <img src={hotel['image']} alt={hotel.Name} />
-                                {hotel.Name}
-                            </Link>
-                            {/* Favorites icon */}
-                            <div className="Hfavorite" onClick={() => handleFavoriteClick(hotel.Name, hotel['image'], hotel.Rating)}>
-                                <FaHeart color={favorites.includes(hotel.Name) ? 'red' : 'gray'} />
+                <div class="d-flex justify-content-center " style={{ width: '1483px' }}>
+                    <div className="Hhotels" id="hotelsContainer">
+                        {filteredHotelsByPlace.map((hotel) => (
+                            <div className="Hhotel1" key={hotel.Name}>
+                                <Link to={`/hotel/${hotel.Name}`} className="Hname">
+                                    <img src={hotel['image']} alt={hotel.Name} />
+                                    {hotel.Name}
+                                </Link>
+                                {/* Favorites icon */}
+                                <div className="Hfavorite" onClick={() => handleFavoriteClick(hotel.Name, hotel['image'], hotel.Rating)}>
+                                    <FaHeart color={favorites.includes(hotel.Name) ? 'red' : 'gray'} />
+                                </div>
+                                <div className="Hprice">Price: {hotel.Price}</div>
+                                <div className="Hspecial">{hotel.Special}</div>
+                                <div className="Hrating">Rating: {hotel.Rating}</div>
                             </div>
-                            <div className="Hprice">Price: {hotel.Price}</div>
-                            <div className="Hspecial">{hotel.Special}</div>
-                            <div className="Hrating">Rating: {hotel.Rating}</div>
-
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
