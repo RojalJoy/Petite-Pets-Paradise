@@ -4,18 +4,25 @@
     background-repeat: no-repeat;
     padding: 6rem 0rem 0rem 0rem;
     background-size: cover;
-}
 
+
+}
 
 .content{
     justify-content: space-evenly;
     align-items: center;
     color: white;
-}
 
+}
+/* .essentials{
+    color: white;
+    position: relative;
+    right: 0px;
+} */
 .email {
     text-decoration: none;
     color: white;
+    
 }
 
 .footerbottom{
@@ -26,4 +33,13 @@
     font-size: 18px;
     font-family: 'Londrina Solid';
     text-align: center;
+
 }   
+.logo-sec{
+    height:auto;
+    width: 300px;
+    z-index: 3;
+    position: relative;
+    left: 300px;
+  top: 150px;
+}

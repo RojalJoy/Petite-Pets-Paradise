@@ -22,9 +22,10 @@ h1 {
 }
 
 .Hlogo {
-    height: 40px;
-    width: auto;
-    /* Remove top and left properties */
+    position: absolute;
+    top: 70px;
+    left: 400px; /* Updated left position to 400px */
+    height: 50px;
 }
 
 

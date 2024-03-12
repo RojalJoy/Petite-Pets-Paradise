@@ -169,7 +169,7 @@ const UserProfile = () => {
   return (
     <>
     <Navbar/>
-    <div className="container">
+    <div className="contain">
       <header>
         {user ? (
           <>

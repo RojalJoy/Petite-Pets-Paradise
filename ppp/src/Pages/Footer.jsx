@@ -20,7 +20,7 @@ function Footer() {
           </div>
           <div className="social">
           <h2>Contact</h2>
-          <a className="email"href="mailto:petitepetsparadise@gmail.com" style={{color:'white', textDecoration:"none", fontWeight:"200"}}>
+          <a href="mailto:petitepetsparadise@gmail.com" style={{color:'white', textDecoration:"none", fontWeight:"200"}}>
           <p> <IoMdMail/> petitepetsparadise@gmail.com</p>
           </a>
           <a href="tel:1234567890" style={{color:'white', textDecoration:"none", fontWeight:"200"}}>
