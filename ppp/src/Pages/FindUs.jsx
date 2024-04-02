@@ -2,6 +2,7 @@ import React from 'react';
 import "../CSS/FindUs.css"
 import { Helmet } from 'react-helmet';
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 function FindUs() {
   return (

@@ -44,10 +44,11 @@ function HotelDetails() {
                 <div className="details" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
                     {hotelDetails ? (
                         <>
-                            <img src={hotelDetails['image']} alt={hotelDetails.Name} style={{ maxWidth: '40%', alignSelf: 'flex-start', borderRadius: '5px' }} />
+                            <img src={hotelDetails['image']} alt={hotelDetails.Name} style={{ maxWidth: '100%', alignSelf: 'flex-start', borderRadius: '5px' }} />
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Name:</span> {hotelDetails.Name}
+                                <span style={{ fontWeight: 'bold' }}></span> {hotelDetails.Name}
                             </p>
+                            
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
                                 <span style={{ fontWeight: 'bold' }}>Price:</span> {hotelDetails.Price}
                             </p>

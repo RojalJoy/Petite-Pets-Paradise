@@ -95,8 +95,6 @@ function HomeScreen() {
             </div>
 
 
-
-
             <div className="homeawaytext">
                 <p className="Label"></p>
                 <span className="text-wrapper">Your HOME AWAY FROM HOME.

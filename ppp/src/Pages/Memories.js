@@ -3,6 +3,7 @@ import { imageDB } from "./Config";
 import { getDownloadURL, listAll, ref } from "firebase/storage";
 import '../CSS/Memories.css'
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 function Memories() {
   const [imgUrl, setImgUrl] = useState([]);
 
@@ -29,6 +30,7 @@ function Memories() {
         </div>
       ))}
     </div>
+    <Footer/>
     </>
   );
 }
