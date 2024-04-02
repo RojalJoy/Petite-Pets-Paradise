@@ -1,0 +1,92 @@
+
+.About{
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 10px; 
+  color: rgb(255, 230, 153);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+  font-size: 70px;
+  position: absolute;
+  top: 220%;
+  left: 25%;
+}
+#vec5{
+  position: absolute;
+  width: 320px;
+  left: 25%;
+  top:220%;
+  z-index: -1;
+}
+#vec6{
+  position: absolute;
+  width: 600px;
+  top: 2185px;
+}
+.doggo img{
+  position: absolute;
+  height: 660px;
+  width: 450px;
+  left: 30px;
+  top: 1800px;
+}
+#rec16{
+  position: absolute;
+  width: 650px;
+  top: 1800px;
+  left: 705px;
+
+}
+#rec17{
+  position: absolute;
+  width: 650px;
+  z-index: -1;
+  left: 700px;
+  top: 1800px;
+
+}
+.Aboutpara{
+  position: absolute;
+  width: 500px;
+  top: 1900px;
+  left: 800px;
+  font-family: "Manjari", sans-serif;
+  font-weight: 220;
+  font-style: normal;
+  text-align: justify;
+  letter-spacing: 1px; 
+}
+.stay .Book{
+  position: absolute;
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 10px; 
+  top: 2300px;
+  left: 500px;
+  font-size: 55px;
+  text-shadow: 2px 2px 0px #ffffff, -2px -2px 0px #ffffff, 2px -2px 0px #ffffff, -2px 2px 0px #ffffff; /* white outline */
+
+}
+.stay .pets{
+  position: absolute;
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1px; 
+  top: 2400px;
+  left: 500px;
+  font-size: 55px;
+  color: rgb(250, 145, 137);
+  letter-spacing: 10px; 
+  text-shadow: 2px 2px 0px #ffffff, -2px -2px 0px #ffffff, 2px -2px 0px #ffffff, -2px 2px 0px #ffffff; /* white outline */
+
+}
+
+
+@media (max-width: 769) {
+  .doggo img{
+    display: none !important;
+  }
+  
+}

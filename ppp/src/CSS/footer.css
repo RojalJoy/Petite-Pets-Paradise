@@ -1,0 +1,48 @@
+.footer {
+    background-image: url(../Images/footbg.png);
+    margin: 1rem 0rem;
+    background-repeat: no-repeat;
+    padding: 6rem 0rem 0rem 0rem;
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.essentials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start (left) */
+}
+
+/* Add margin-right to space out the items */
+.essentials p {
+    margin-right: 20px; /* Adjust this value as needed */
+}
+
+.social {
+    /* Add any necessary styling */
+}
+
+.footerbottom {
+    background-image: url('../Images/YellowFooter.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 4rem 0rem 0rem 0rem;
+    font-size: 18px;
+    font-family: 'Londrina Solid';
+    text-align: center;
+}
+
+.logo-sec {
+    height: auto;
+    width: 300px;
+    z-index: 3;
+    position: relative;
+    left: 30px;
+    top: 20px;
+}

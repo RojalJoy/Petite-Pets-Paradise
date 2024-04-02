@@ -1,0 +1,112 @@
+.contactUs{
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: 10px; 
+    color: rgb(255, 230, 153);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+    font-size: 70px;
+  }
+  #Vec-5{
+    width: 600px;
+    height: 600px;
+    left: 100px;
+    top: 150px;
+    position: absolute;
+  }
+  
+  .feedback{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 190px;
+    top: 570px;
+  }
+  .phone{
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    left: 190px;
+    top: 430px;
+  }
+  .mail{
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    left: 130px;
+    top: 240px;
+  }
+  .mailtext{
+    position: absolute;
+    font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  left: 270px;
+  top: 290px;
+  font-size: 23px;
+
+
+  }
+  .phonetext{
+    position: absolute;
+    font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  left: 290px;
+  top: 430px;
+  font-size: 23px;
+  letter-spacing: 1px; 
+
+  }
+  .finder{
+    position: absolute;
+    width: 550px;
+    height: 520px;
+    opacity: 0.6;
+    rotate: -78deg;
+    right: 0px ;
+    top: 20px;
+  }
+  .Find{
+    position: absolute;
+    font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: rgb(250, 145, 137);
+  text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5); 
+  rotate: 25deg;
+  right: 150px;
+  top: 200px;
+  letter-spacing: 9px;
+  }
+  .Here{
+    position: absolute;
+    font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 150px;
+  color: rgb(250, 145, 137);
+  text-shadow: -3px 3px 5px rgba(0, 0, 0, 0.5); 
+  rotate: 25deg;
+  right: 190px;
+  top: 290px;
+  letter-spacing: 9px;
+  }
+  .feedbacktext{
+    position: absolute;
+    font-family: "Manjari", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: justify;
+  left: 290px;
+  top: 570px;
+  font-size: 23px;
+  letter-spacing: 1px; 
+  }
+  .footervec{
+    position: absolute;
+    bottom: 0px;
+  }

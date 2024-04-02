@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { firestore } from "../Pages/fire";
 import Navbar from '../Pages/Navbar';
 import { collection, getDocs, query, where } from "@firebase/firestore";
+import Footer from '../Pages/Footer';
 
 function HotelDetails() {
     const [hotelDetails, setHotelDetails] = useState(null);
@@ -10,7 +11,7 @@ function HotelDetails() {
         const fetchHotelDetails = async () => {
             const hotelName = decodeURIComponent(window.location.pathname.split('/').pop());
 
-            const hotelsCollectionRef = collection(firestore, 'PetHotels');
+            const hotelsCollectionRef = collection(firestore, 'NewPetHotels');
             const hotelsQuery = query(hotelsCollectionRef, where('Name', '==', hotelName));
             const hotelsQuerySnapshot = await getDocs(hotelsQuery);
 
@@ -45,8 +46,9 @@ function HotelDetails() {
                         <>
                             <img src={hotelDetails['image']} alt={hotelDetails.Name} style={{ maxWidth: '100%', alignSelf: 'flex-start', borderRadius: '5px' }} />
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Name:</span> {hotelDetails.Name}
+                                <span style={{ fontWeight: 'bold' }}></span> {hotelDetails.Name}
                             </p>
+                            
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
                                 <span style={{ fontWeight: 'bold' }}>Price:</span> {hotelDetails.Price}
                             </p>
@@ -60,11 +62,21 @@ function HotelDetails() {
                                 <span style={{ fontWeight: 'bold' }}>Place:</span> {hotelDetails.place}
                             </p>
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Website:</span>{' '}
+                               
                                 <a href={hotelDetails['Website-href']} target="_blank" rel="noopener noreferrer" style={{ color: '#2196F3', textDecoration: 'none' }}>
-                                    {hotelDetails['Website-href']}
+                                <button style={{ padding: '10px', background: '#2196F3', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+                                      Click to Book
+                                    </button>
                                 </a>
                             </p>
+                            <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
+                               
+                               <a href={hotelDetails['directions']} target="_blank" rel="noopener noreferrer" style={{ color: '#2196F3', textDecoration: 'none' }}>
+                               <button style={{ padding: '10px', background: '#2196F3', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+                                     Let us direct you
+                                   </button>
+                               </a>
+                           </p>
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
                                 <span style={{ fontWeight: 'bold' }}>Description:</span> {hotelDetails.Description}
                             </p>
@@ -79,6 +91,7 @@ function HotelDetails() {
                     )}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

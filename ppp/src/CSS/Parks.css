@@ -1,0 +1,84 @@
+
+
+.Pcontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+h1 {
+
+    text-align: center;
+
+}
+
+.Hlogo {
+    height: 40px;
+    width: auto;
+    /* Remove top and left properties */
+}
+
+
+.Hparks {
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.Hparks1{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.Hparks img {
+    width: 100%;
+    height: 150px; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure images maintain their aspect ratio and cover the container */
+    border-radius: 10px;
+}
+
+.Hname{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .Hparks {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Hlogo {
+        position: absolute;
+        top: 70px;
+        left: 650px;
+        height: 50px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .Hparks {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .Hlogo {
+        position: absolute;
+        top: 70px;
+        left: 750px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .Hparks {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .Hlogo {
+        position: absolute;
+        top: 50px;
+        left: 780px;
+        height: 80px;
+    }
+}
+

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { firestore } from "../Pages/fire";
 import Navbar from '../Pages/Navbar';
 import { collection, getDocs, query, where } from "@firebase/firestore";
+import Footer from './Footer';
 
 function ParkDetails() {
     const [ParkDetails, setParkDetails] = useState(null);
@@ -10,8 +11,8 @@ function ParkDetails() {
         const fetchParkDetails = async () => {
             const ParkName = decodeURIComponent(window.location.pathname.split('/').pop());
 
-            const ParksCollectionRef = collection(firestore, 'PetParks');
-            const ParksQuery = query(ParksCollectionRef, where('Name', '==', ParkName));
+            const ParksCollectionRef = collection(firestore, 'petActivities');
+            const ParksQuery = query(ParksCollectionRef, where('name', '==', ParkName));
             const ParksQuerySnapshot = await getDocs(ParksQuery);
 
             if (!ParksQuerySnapshot.empty) {
@@ -45,32 +46,25 @@ function ParkDetails() {
                         <>
                             <img src={ParkDetails['image']} alt={ParkDetails.Name} style={{ maxWidth: '40%', alignSelf: 'flex-start', borderRadius: '5px' }} />
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Name:</span> {ParkDetails.Name}
+                                <span style={{ fontWeight: 'bold' }}>Name:</span> {ParkDetails.name}
                             </p>
-                            <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Price:</span> {ParkDetails.Price}
-                            </p>
-                            <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Special:</span> {ParkDetails.Special}
-                            </p>
+                          
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
                                 <span style={{ fontWeight: 'bold' }}>Location:</span> {ParkDetails.location}
                             </p>
+
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Place:</span> {ParkDetails.place}
-                            </p>
-                            <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Website:</span>{' '}
-                                <a href={ParkDetails['Website-href']} target="_blank" rel="noopener noreferrer" style={{ color: '#2196F3', textDecoration: 'none' }}>
-                                    {ParkDetails['Website-href']}
+                               
+                                <a href={ParkDetails['directions']} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                                    <button style={{ padding: '10px', background: '#2196F3', color: '#fff', border: 'none', borderRadius: '5px', cursor: 'pointer' }}>
+                                        Get Directions
+                                    </button>
                                 </a>
                             </p>
                             <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Description:</span> {ParkDetails.Description}
+                                <span style={{ fontWeight: 'bold' }}>Description:</span> {ParkDetails.desc}
                             </p>
-                            <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
-                                <span style={{ fontWeight: 'bold' }}>Rating:</span> {ParkDetails.Rating}
-                            </p>
+ 
                         </>
                     ) : (
                         <p style={{ fontFamily: 'Merriweather, sans-serif', fontSize: '16px', lineHeight: '1.5', marginBottom: '10px' }}>
@@ -79,6 +73,7 @@ function ParkDetails() {
                     )}
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

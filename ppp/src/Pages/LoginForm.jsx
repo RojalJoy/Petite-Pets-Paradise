@@ -97,7 +97,7 @@ export default function LoginForm() {
                 <button onClick={() => navigate('/Register')}>Register</button> {/* Add the register button */}
             </form>
         </div>
-
+            
         </>
     );
 }

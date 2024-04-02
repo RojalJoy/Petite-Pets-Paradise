@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { firestore } from "./fire.js";
-import { addDoc, collection } from "@firebase/firestore";
+import {  query, where, getDocs, addDoc, collection } from "@firebase/firestore";
 import '../CSS/Register.css'; 
 import Navbar from './Navbar.js';
 
@@ -21,6 +21,24 @@ export default function Register() {
 
     const handleSave = async (e) => {
         e.preventDefault();
+           // Validate password and confirm password
+           const password = passwordRef.current.value;
+           const confirmPassword = confirmPasswordRef.current.value;
+   
+           if (password !== confirmPassword) {
+               alert("Password and Confirm Password do not match. Please check again.");
+               return;
+           }
+
+            // Check if the entered username already exists in the 'customer' collection
+        const existingUserQuery = query(customerRef, where("username", "==", usernameRef.current.value));
+        const existingUserSnapshot = await getDocs(existingUserQuery);
+
+        if (!existingUserSnapshot.empty) {
+            alert("Username already exists. Please choose a different username.");
+            return;
+        }
+          // Check if the entered username already exists in the 'customer' collection
         const data = {
             email: emailRef.current.value,
             password: passwordRef.current.value,
@@ -37,10 +55,16 @@ export default function Register() {
         try {
             await addDoc(customerRef, data); // Add the document to the 'customer' collection
             console.log("Document added successfully!");
+            // Show an alert when the document is added successfully
+            alert("Registration successful! Click OK to reload the page.");
+
+            
+            // Reload the register page
+            window.location.reload();
         } catch (error) {
             console.error("Error adding document: ", error.message);
         }
-    }
+    };
     
     return (
         <>

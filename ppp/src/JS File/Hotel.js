@@ -6,6 +6,7 @@ import { firestore } from "../Pages/fire";
 import { collection, getDocs, addDoc, query, where, deleteDoc, doc } from "@firebase/firestore";
 import { Link, useNavigate } from 'react-router-dom';
 import { useUser } from '../Pages/UserContext';
+import Footer from '../Pages/Footer';
 
 function Hotel() {
     const [hotels, setHotels] = useState([]);
@@ -26,7 +27,7 @@ function Hotel() {
     }, []);
 
     const fetchHotelsFromFirebase = async () => {
-        const hotelsCollectionRef = collection(firestore, 'PetHotels');
+        const hotelsCollectionRef = collection(firestore, 'NewPetHotels');
         const hotelsQuerySnapshot = await getDocs(hotelsCollectionRef);
 
         const fetchedHotels = hotelsQuerySnapshot.docs.map(doc => ({
@@ -200,6 +201,7 @@ function Hotel() {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 }

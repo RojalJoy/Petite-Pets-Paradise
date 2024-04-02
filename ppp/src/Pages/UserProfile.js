@@ -11,6 +11,7 @@ import { v4 } from "uuid";
 
 import '../CSS/profile.css'; // Import your stylesheet
 import Navbar from './Navbar';
+import Footer from './Footer';
 
 const UserProfile = () => {
   const { user, logoutUser } = useUser();
@@ -127,7 +128,7 @@ const UserProfile = () => {
       const Ratings = favoritesQuerySnapshot.docs.map(doc => doc.data().Rating);
 
       // Fetch hotel names with similar Ratings but different names
-      const hotelsCollectionRef = collection(firestore, 'PetHotels');
+      const hotelsCollectionRef = collection(firestore, 'NewPetHotels');
       const recommendedHotelNamesQuery = query(hotelsCollectionRef, where('Rating', 'in', Ratings));
       const recommendedHotelNamesQuerySnapshot = await getDocs(recommendedHotelNamesQuery);
 
@@ -168,7 +169,7 @@ const UserProfile = () => {
   return (
     <>
     <Navbar/>
-    <div className="container">
+    <div className="contain">
       <header>
         {user ? (
           <>
@@ -252,6 +253,7 @@ const UserProfile = () => {
         )}
       </footer>
     </div>
+    <Footer/>
     </>
   );
 };

@@ -21,6 +21,11 @@ import Memories from './Pages/Memories';
 import UserProfile from './Pages/UserProfile';
 import Parks from './Pages/Parks';
 import ParkDetails from './Pages/ParkDetails'; 
+import Services from './Pages/Services'
+import ServiceDetails from './Pages/ServiceDetails';
+import PetCare from './Pages/PetCare';
+import FindUs from './Pages/FindUs';
+import AboutUs from './Pages/AboutUs';
 function App() {
  
   return (
@@ -39,6 +44,12 @@ function App() {
         {<Route path="/UserProfile" element={<UserProfile />} /> }
         {<Route path="/Parks" element={<Parks />} /> }
         {<Route path="/park/:name" element={<ParkDetails />} />}
+        {<Route path="/Services" element={<Services />} />}
+        {<Route path="/service/:name" element={<ServiceDetails />} />}
+        {<Route path="/PetCare" element={<PetCare />} />}
+        {<Route path="/FindUs" element={<FindUs/>} />}
+        {<Route path="/PetCare" element={<PetCare/>} />}
+        {<Route path="/AboutUs" element={<AboutUs/>} />}
       </Routes>
       </UserProvider> 
     </BrowserRouter>
