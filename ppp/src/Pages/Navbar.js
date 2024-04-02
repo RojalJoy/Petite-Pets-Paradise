@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../CSS/Navbar.css'; // Import your Navbar styles if needed
 import { useUser } from '../Pages/UserContext';
+
 import PetCare from './PetCare';
 import FindUs from './FindUs';
+
+import { TiThMenu } from "react-icons/ti";
+
 function Navbar() {
   const { user } = useUser();
 
   const profileLink = user ? '/UserProfile' : '/LoginForm';
   const username = user ? user : 'Name';
+  const [isOpen, setIsOpen] = useState(false);
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
+
     <nav>
       <div className="logo">
         <img src={require("../Images/logo.png")} alt="Logo" />
@@ -26,6 +35,7 @@ function Navbar() {
         <li><Link to={profileLink}><i className="fas fa-user"></i>{username}</Link></li>
       </ul>
     </nav>
+
   );
 }
 

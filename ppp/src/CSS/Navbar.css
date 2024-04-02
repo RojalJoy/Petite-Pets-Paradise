@@ -6,7 +6,9 @@ nav {
   align-items: center;
   color: #000;
 }
-
+.nav-mobile{
+  display: none;
+}
 .logo img {
   height: 50px;
 }

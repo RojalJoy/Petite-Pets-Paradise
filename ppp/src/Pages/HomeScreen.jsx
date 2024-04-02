@@ -11,8 +11,7 @@ import '../CSS/pet.css'
 import "../CSS/AboutUs.css";
 import AboutUs from './AboutUs';
 import PetCare from './PetCare';
-
-
+import '../CSS/media.css'
 function HomeScreen() {
   return (
     <>
